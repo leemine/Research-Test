@@ -1,0 +1,14 @@
+System describe:
+
+Co-ordinate systems supported:
+WGS84 - Global Positioning System - [latitude, longtitude, height]
+ECEF - Earth-Centred, Earth-Fixed - [x,y,z] in Earth frame
+ENU - East, North, Up - [x,y,z] in local frame
+NED - North, East, Down - [x,y,z] in local frame
+https://github.com/ethz-asl/geodetic_utils
+
+
+
+
+1 GEODETIC_CONVERTER
+https://github.com/ethz-asl/geodetic_utils/blob/master/include/geodetic_utils/geodetic_conv.hpp
