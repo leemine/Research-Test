@@ -12,5 +12,24 @@ http://www.cnblogs.com/gemstone/category/409734.html
 4. 入门推荐CES486
 http://www.cse.psu.edu/~rtc12/CSE486/
 
+5. 其他入门建议：
+5.1 入门
+http://vision.stanford.edu/teaching/cs131_fall1617/
+
+另外的人推荐：
+Computer Vision:  Models, Learning, and Inference
+http://www.computervisionmodels.com/
+
+5.2 视频
+https://www.youtube.com/playlist?list=PLd3hlSJsX_ImKP68wfKZJVIPTd8Ie5u-9
+
+5.3 进阶231n课程
+CS231n的全称是CS231n: Convolutional Neural Networks for Visual Recognition，即面向视觉识别的卷积神经网络。
+http://cs231n.stanford.edu/
+or
+http://www.mooc.ai/course/268
+or
+http://www.mooc.ai/
+
 考虑下：An Invitation to 3-D Vision
 An Invitation to 3-D Vision没看过，但小伙伴觉得写得比多视图几何要易懂一些。
