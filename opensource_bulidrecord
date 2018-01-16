@@ -33,6 +33,10 @@ Call Stack (most recent call first):
     #else()
     #  message(STATUS "Looking for ccache - not found")
 
+ERROR 5： protoc: Command not found
+参考： https://github.com/ethz-asl/maplab/issues/2
+
+
 注意点1：通过URL下载安装包，需要在越狱后才能下载；
   URL https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
   URL_MD5 423237bccd1c6e0a5edd812823fb4237
@@ -41,3 +45,4 @@ Call Stack (most recent call first):
   GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
   GIT_TAG ${CERES_TAG}
 注意点3：  手工替换下载的opencv 3.2.0.zip文件；  （opencv_contrib和opencv，分别50多M和80多M）
+
