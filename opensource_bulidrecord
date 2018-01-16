@@ -6,6 +6,21 @@ Error 2:  maplab_dependencies/3rdparty/ceres_catkin/CMakeLists.txt
   #GIT_REPOSITORY https://ceres-solver.googlesource.com/ceres-solver
   GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
 
+ERROR 3:
+the following packages have unmet dependencies:
+    ros-kinetic-desktop-full:Depends:      .... but it is not going to be installed
+    ros-kinetic-desktop-full:Depends:      .... but it is not going to be installed
+    ....
+E: Unable to correct problems, you have held broken packages.
+
+解决方法：
+sudo dpkg --clear-avail
+sudo dpkg --configure -a
+sudo apt-get install -f
+sudo apt-get update
+sudo apt-get upgrade
+
+
 注意点1：通过URL下载安装包，需要在越狱后才能下载；
   URL https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
   URL_MD5 423237bccd1c6e0a5edd812823fb4237
