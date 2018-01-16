@@ -1,0 +1,3 @@
+Opensource:  eth maplab
+Error 1:  Protocol "https" not supported or disabled in libcurl
+          https://github.com/ruslo/hunter/issues/328
