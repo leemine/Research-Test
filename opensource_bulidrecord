@@ -23,6 +23,16 @@ sudo apt-get update
 sudo apt-get upgrade
 
 
+ERROR 4:
+CMake Error at cmake/OpenCVCompilerOptions.cmake:21 (else):
+  A duplicate ELSE command was found inside an IF block.
+Call Stack (most recent call first):
+  CMakeLists.txt:495 (include)
+
+注释catkin_maplab/build/opencv3_catkin/opencv3_src/cmake/OpenCVCompilerOptions.cmake，21行、22行；
+    #else()
+    #  message(STATUS "Looking for ccache - not found")
+
 注意点1：通过URL下载安装包，需要在越狱后才能下载；
   URL https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
   URL_MD5 423237bccd1c6e0a5edd812823fb4237
