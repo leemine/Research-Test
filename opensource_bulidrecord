@@ -5,3 +5,11 @@ Error 1:  Protocol "https" not supported or disabled in libcurl
 Error 2:  maplab_dependencies/3rdparty/ceres_catkin/CMakeLists.txt
   #GIT_REPOSITORY https://ceres-solver.googlesource.com/ceres-solver
   GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
+
+注意点1：通过URL下载安装包，需要在越狱后才能下载；
+  URL https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
+  URL_MD5 423237bccd1c6e0a5edd812823fb4237
+  
+注意点2  通过git clone下载，需要关闭越狱才能下载；
+  GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
+  GIT_TAG ${CERES_TAG}
