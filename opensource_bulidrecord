@@ -1,3 +1,7 @@
 Opensource:  eth maplab
 Error 1:  Protocol "https" not supported or disabled in libcurl
           https://github.com/ruslo/hunter/issues/328
+
+Error 2:  maplab_dependencies/3rdparty/ceres_catkin/CMakeLists.txt
+  #GIT_REPOSITORY https://ceres-solver.googlesource.com/ceres-solver
+  GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
