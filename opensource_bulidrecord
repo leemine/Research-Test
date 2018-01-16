@@ -12,6 +12,8 @@ the following packages have unmet dependencies:
     ros-kinetic-desktop-full:Depends:      .... but it is not going to be installed
     ....
 E: Unable to correct problems, you have held broken packages.
+重新安装ros方法
+https://my.oschina.net/lvzht/blog/645873
 
 解决方法：
 sudo dpkg --clear-avail
