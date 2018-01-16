@@ -40,3 +40,4 @@ Call Stack (most recent call first):
 注意点2  通过git clone下载，需要关闭越狱才能下载；
   GIT_REPOSITORY https://github.com/ceres-solver/ceres-solver.git
   GIT_TAG ${CERES_TAG}
+注意点3：  手工替换下载的opencv 3.2.0.zip文件；  （opencv_contrib和opencv，分别50多M和80多M）
