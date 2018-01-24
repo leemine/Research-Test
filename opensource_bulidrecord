@@ -36,6 +36,11 @@ Call Stack (most recent call first):
 ERROR 5： protoc: Command not found
 参考： https://github.com/ethz-asl/maplab/issues/2
 
+ERROR 6：   CMake Error at cmake/OpenCVFindIPP.cmake:243 (include):
+            include could not find load file:
+opencv3_catkin/opencv3_src/cmake/OpenCVFindIPP.cmake
+#include("${OpenCV_SOURCE_DIR}/3rdparty/ippicv/downloader.cmake")
+
 
 注意点1：通过URL下载安装包，需要在越狱后才能下载；
   URL https://github.com/opencv/opencv_contrib/archive/3.2.0.zip
