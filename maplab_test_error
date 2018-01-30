@@ -1,0 +1,30 @@
+-- Filter: Initialized at t = 1512670840.17
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.193949 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+W0130 16:55:20.194130 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.321772 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+W0130 16:55:20.321833 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.453829 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+W0130 16:55:20.454511 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+I0130 16:55:20.483439 29580 OutlierDetection.hpp:47] Detected outlier - mahalanobis (d / threshold):18.2624 > 9.21 - count : 1.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.589516 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+W0130 16:55:20.589721 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.719390 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+W0130 16:55:20.719446 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:20.988224 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
+    ERROR: No valid coordinate data!
+    ERROR: No valid coordinate data!
+W0130 16:55:21.122076 29586 distortion-equidistant.cc:170] Did not converge with max. iterations.
