@@ -1,0 +1,52 @@
+rosbag play 2017-12-07-13-20-39_0.bag /bb2/left/image_color:=/cam0/image_raw /bb2/right/image_color:=/cam1/image_raw /mti0/sensor/imu_raw:=/imu0
+
+####ncamera_configure
+
+label: "CLA dataset RA-L - 23016 turtlebot factory"
+id: 412eab8e4058621f7036b5e765dfe813
+cameras:
+- camera:
+    label: cam0
+    id: 54812562fa109c40fe90b29a59dd7795
+    line-delay-nanoseconds: 0
+    image_height: 768
+    image_width: 1024
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [543.032590410744, 544.0849752033768, 527.3083197834218, 373.90426407149033]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.3059858234718519, 0.06899563043782, 0.00170507523585678, -0.0013755689225753236]
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [-0.08810352,  0.00590162,  0.99609384,  0.010953,
+           -0.99610902,  0.00163056, -0.08811452, -0.00242306,
+           -0.00214421, -0.99998126,  0.005735,   -0.02925238,
+           0.0, 0.0, 0.0, 1.0]
+
+
+###   imu_configure
+id: c63aecb41bfdfd6b7e1fac37c7cbe7bf
+hardware_id: imu0
+sensor_type: IMU
+sigmas:
+  gyro_noise_density: 12.0e-4
+  gyro_bias_random_walk_noise_density: 12.0e-4
+  acc_noise_density: 8e-3
+  acc_bias_random_walk_noise_density: 8e-3
+saturation_accel_max_mps2: 150.0
+saturation_gyro_max_radps: 7.5
+gravity_magnitude_mps2: 9.81
+
+
+###  imu_rovio_configure
+acc_noise_density: 4e-4
+acc_bias_random_walk_noise_density: 1e-5
+gyro_noise_density: 7.6e-6
+gyro_bias_random_walk_noise_density: 3.8e-6
