@@ -7,6 +7,10 @@ Datasets:
 3. Static envioment + Dynamic objects(control by us);
 
 To do:
+Test：
+1. Add pose， load google map；
+2. Compare with okvis and other algorithm；
+
 Sensors setup:
 1. Order high accuracy Calibrate board;
 2. Update the calibration parameters by new calibration board;
