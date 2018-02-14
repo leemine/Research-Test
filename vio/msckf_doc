@@ -1,0 +1,22 @@
+Sensors setup:
+1. Xiaomi Stereo IMU hardware.
+
+Datasets:
+1. Static envioment data collection;
+2. Indoor Parking zoom data collection;
+3. Static envioment + Dynamic objects(control by us);
+
+To do:
+Sensors setup:
+1. Order high accuracy Calibrate board;
+2. New Stereo + IMU hardware;
+3. Update the calibration parameters by new calibration board;
+
+Architecture:
+1. Seperate diffent blocks, update the arch documents.
+2. Support loop closure:   Deep loop closure.
+
+Functions:
+1. Dynamic Objects.
+2. Time difference support.
+3. Robust vio test;
