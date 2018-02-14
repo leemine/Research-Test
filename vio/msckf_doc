@@ -10,6 +10,12 @@ To do:
 Sensors setup:
 1. Order high accuracy Calibrate board;
 2. New Stereo + IMU hardware;
+   eg.:  http://grauonline.de/wordpress/?page_id=1951  
+   a. monochrome global shutter camera (mvBlueFox-MLC200wG, ON Semiconductor MT9V034 digital image sensor) connected via USB 
+   (important: it has an external trigger pin we’ll use for hardware synchronization)
+   b. 132 degree fisheye lense
+   c. IMU: GY-88 (MPU6050) connected to Arduino Nano
+   
 3. Update the calibration parameters by new calibration board;
 
 Architecture:
