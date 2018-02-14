@@ -19,11 +19,12 @@ Sensors setup:
 
 Architecture:
 1. Seperate diffent blocks, update the arch documents.
-2. Support loop closure:   Deep loop closure.
+2. Support localizition sparse map for loop dectect;
+3. Support deep learning loop closure;
 
 Functions:
 1. Dynamic Objects.
 2. Time difference support.
 3. Robust vio test;
 
-4. Support localizition sparse map for loop dectect;
+
