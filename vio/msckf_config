@@ -1,0 +1,142 @@
+camchain-imucam-xiaomi.yaml
+
+# The modifications of the output file from Kalibr:
+# 1. For each matrix (e.g. cam0/T_cam_imu), remove the brackets and minus sign for each line. Use one pair of brackets for each matrix.
+# 2. Add the T_imu_body at the end of the calibration file (usually set to identity).
+cam0:
+  T_cam_imu:
+    [-0.02444352109483494, 0.9988682083391774, -0.04080216471914084, 0.013325034138735368,
+    -0.999632772253248, -0.024899056036852385, -0.010693813433929243, 0.00130311428428874,
+    -0.0116976456508291, 0.040525786577871946, 0.9991100168192052, 0.023370315619476736,
+    0.0, 0.0, 0.0, 1.0]
+  camera_model: pinhole
+  distortion_coeffs: [-0.31099265406933774, 0.09847632597478553, -0.0001747582426810243, 0.00025048438583699737]
+  distortion_model: radtan
+  intrinsics: [439.5686626601706, 438.10493016469786, 384.2212458629175, 240.06264481698662]
+  resolution: [752, 480]
+  timeshift_cam_imu: 0.0
+cam1:
+  T_cam_imu:
+    [-0.02463279936974233, 0.9987630018556529, -0.04319364906436054, -0.10633747120772047,
+    -0.9996276981508719, -0.02511524922358438, -0.010662520622557861, 0.0016257645946263263,
+    -0.011734150365461153, 0.04291492025767208, 0.9990098194384669, 0.024155022154756713,
+    0.0, 0.0, 0.0, 1.0]
+  T_cn_cnm1:
+    [0.9999971169539765, 0.00021740239621965821, -0.0023914054296839743, -0.11960686233027128,
+    -0.00021734934445873924, 0.9999999761277578, 2.244420729890143e-05, 0.00032502200067238376,
+    0.0023914102520202173, -2.1924372188741986e-05, 0.9999971403340734, 0.0007529363132898811,
+    0.0, 0.0, 0.0, 1.0]
+  camera_model: pinhole
+  distortion_coeffs: [-0.2971381473068339, 0.0797200532521012, -0.0002579270253018593, -0.0003091213902858391]
+  distortion_model: radtan
+  intrinsics: [438.5640520472941, 437.5425893161059, 394.6371416432581, 259.04858805973737]
+  resolution: [752, 480]
+  timeshift_cam_imu: 0.0
+T_imu_body:
+  [1.0000, 0.0000, 0.0000, 0.0000,
+  0.0000, 1.0000, 0.0000, 0.0000,
+  0.0000, 0.0000, 1.0000, 0.0000,
+  0.0000, 0.0000, 0.0000, 1.0000]
+
+
+image_processor_xiaomi.launch
+
+<launch>
+
+  <arg name="robot" default="firefly_sbx"/>
+  <arg name="calibration_file"
+    default="$(find msckf_vio)/config/camchain-imucam-xiaomi.yaml"/>
+
+  <!-- Image Processor Nodelet  -->
+  <group ns="$(arg robot)">
+    <node pkg="nodelet" type="nodelet" name="image_processor"
+      args="standalone msckf_vio/ImageProcessorNodelet"
+      output="screen">
+
+      <rosparam command="load" file="$(arg calibration_file)"/>
+      <param name="grid_row" value="4"/>
+      <param name="grid_col" value="5"/>
+      <param name="grid_min_feature_num" value="3"/>
+      <param name="grid_max_feature_num" value="4"/>
+      <param name="pyramid_levels" value="3"/>
+      <param name="patch_size" value="15"/>
+      <param name="fast_threshold" value="10"/>
+      <param name="max_iteration" value="30"/>
+      <param name="track_precision" value="0.01"/>
+      <param name="ransac_threshold" value="3"/>
+      <param name="stereo_threshold" value="5"/>
+
+      <remap from="~imu" to="/imu0"/>
+      <remap from="~cam0_image" to="/cam0/image_raw"/>
+      <remap from="~cam1_image" to="/cam1/image_raw"/>
+
+    </node>
+  </group>
+
+</launch>
+
+msckf_vio_xiaomi.launch
+
+<launch>
+
+  <arg name="robot" default="firefly_sbx"/>
+  <arg name="fixed_frame_id" default="world"/>
+  <arg name="calibration_file"
+    default="$(find msckf_vio)/config/camchain-imucam-xiaomi.yaml"/>
+
+  <!-- Image Processor Nodelet  -->
+  <include file="$(find msckf_vio)/launch/image_processor_xiaomi.launch">
+    <arg name="robot" value="$(arg robot)"/>
+    <arg name="calibration_file" value="$(arg calibration_file)"/>
+  </include>
+
+  <!-- Msckf Vio Nodelet  -->
+  <group ns="$(arg robot)">
+    <node pkg="nodelet" type="nodelet" name="vio"
+      args='standalone msckf_vio/MsckfVioNodelet'
+      output="screen">
+
+      <!-- Calibration parameters -->
+      <rosparam command="load" file="$(arg calibration_file)"/>
+
+      <param name="publish_tf" value="true"/>
+      <param name="frame_rate" value="20"/>
+      <param name="fixed_frame_id" value="$(arg fixed_frame_id)"/>
+      <param name="child_frame_id" value="odom"/>
+      <param name="max_cam_state_size" value="20"/>
+      <param name="position_std_threshold" value="8.0"/>
+
+      <param name="rotation_threshold" value="0.2618"/>
+      <param name="translation_threshold" value="0.4"/>
+      <param name="tracking_rate_threshold" value="0.5"/>
+
+      <!-- Feature optimization config -->
+      <param name="feature/config/translation_threshold" value="-1.0"/>
+
+      <!-- These values should be standard deviation -->
+      <param name="noise/gyro" value="0.005"/>
+      <param name="noise/acc" value="0.05"/>
+      <param name="noise/gyro_bias" value="0.001"/>
+      <param name="noise/acc_bias" value="0.01"/>
+      <param name="noise/feature" value="0.035"/>
+
+      <param name="initial_state/velocity/x" value="0.0"/>
+      <param name="initial_state/velocity/y" value="0.0"/>
+      <param name="initial_state/velocity/z" value="0.0"/>
+
+      <!-- These values should be covariance -->
+      <param name="initial_covariance/velocity" value="0.25"/>
+      <param name="initial_covariance/gyro_bias" value="0.01"/>
+      <param name="initial_covariance/acc_bias" value="0.01"/>
+      <param name="initial_covariance/extrinsic_rotation_cov" value="3.0462e-4"/>
+      <param name="initial_covariance/extrinsic_translation_cov" value="2.5e-5"/>
+
+      <remap from="~imu" to="/imu0"/>
+      <remap from="~features" to="image_processor/features"/>
+
+    </node>
+  </group>
+
+</launch>
+
+
