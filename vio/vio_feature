@@ -15,6 +15,9 @@ BA;
 通过金字塔Lucas-Kanade 光流方法计算某些点集的光流（稀疏光流）。
 理解的话，可以参考这篇论文：”Pyramidal Implementation of the Lucas Kanade Feature TrackerDescription of the algorithm”
 
+calcOpticalFlowPyrLK源代码解析：
+http://blog.csdn.net/liyuqian199695/article/details/49121525
+
 http://blog.csdn.net/zouxy09/article/details/8683859
 
 http://blog.csdn.net/tostq/article/details/49157811
