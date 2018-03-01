@@ -28,7 +28,13 @@ http://blog.csdn.net/tostq/article/details/49157811
 
 
 ORB描述子提取与匹配：
-1. ORB-SLAM2跟踪之提取ORB特征
+1.  OpenCV中ORB特征点检测和匹配简单用法
+http://blog.csdn.net/robinhjwy/article/details/77620924
+
+
+参考： ORB-SLAM2源码详解 by 吴博
+
+2. ORB-SLAM2跟踪之提取ORB特征
 http://blog.csdn.net/u011380574/article/details/71498561
 
 http://blog.csdn.net/wangyaninglm/article/details/44805709
