@@ -1,0 +1,31 @@
+1. Fast feature:
+  Stereo match:
+  a. detect cam0 features:
+       // Detect new features on the frist image.
+       vector<KeyPoint> new_features(0);
+       detector_ptr->detect(img, new_features);
+
+       // Find the stereo matched points for the newly
+       // detected features.
+       vector<cv::Point2f> cam0_points(new_features.size());
+       for (int i = 0; i < new_features.size(); ++i)
+         cam0_points[i] = new_features[i].pt;
+
+   b. detect cam1 features:
+
+        // Initialize cam1_points by projecting cam0_points to cam1 using the
+        // rotation from stereo extrinsics
+        const cv::Matx33d R_cam0_cam1 = R_cam1_imu.t() * R_cam0_imu;
+        vector<cv::Point2f> cam0_points_undistorted;
+        undistortPoints(cam0_points, cam0_intrinsics, cam0_distortion_model,
+                    cam0_distortion_coeffs, cam0_points_undistorted,
+                    R_cam0_cam1);
+        cam1_points = distortPoints(cam0_points_undistorted, cam1_intrinsics,
+                                cam1_distortion_model, cam1_distortion_coeffs);
+
+
+
+ps:  feature response;
+
+
+2. 
