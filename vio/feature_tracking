@@ -23,9 +23,16 @@
         cam1_points = distortPoints(cam0_points_undistorted, cam1_intrinsics,
                                 cam1_distortion_model, cam1_distortion_coeffs);
 
+          // Mark those tracked points out of the image region as untracked.
+         
+         
+          // Compute the relative rotation between the cam0 frame and cam1 frame.
 
 
-ps:  feature response;
+          // Further remove outliers based on the known essential matrix.
+
+
+           ps:  feature response;
 
 
 2. 
