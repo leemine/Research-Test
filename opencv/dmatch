@@ -1,0 +1,39 @@
+/* 
+ * Struct for matching: query descriptor index, train descriptor index, train image index and distance between descriptors. 
+ */  
+ /* 
+  * DMatch主要用来储存匹配信息的结构体，query是要匹配的描述子，train是被匹配的描述子，在Opencv中进行匹配时 
+  * void DescriptorMatcher::match( const Mat& queryDescriptors, const Mat& trainDescriptors, vector<DMatch>& matches, const Mat& mask ) const 
+  * match函数的参数中位置在前面的为query descriptor，后面的是 train descriptor 
+  * 例如：query descriptor的数目为20，train descriptor数目为30，则DescriptorMatcher::match后的vector<DMatch>的size为20 
+  * 若反过来，则vector<DMatch>的size为30 
+  *  
+ */  
+struct CV_EXPORTS_W_SIMPLE DMatch  
+{  
+    //默认构造函数，FLT_MAX是无穷大  
+    //#define FLT_MAX         3.402823466e+38F        /* max value */  
+    CV_WRAP DMatch() : queryIdx(-1), trainIdx(-1), imgIdx(-1), distance(FLT_MAX) {}  
+    //DMatch构造函数  
+    CV_WRAP DMatch( int _queryIdx, int _trainIdx, float _distance ) :  
+            queryIdx(_queryIdx), trainIdx(_trainIdx), imgIdx(-1), distance(_distance) {}  
+    //DMatch构造函数  
+    CV_WRAP DMatch( int _queryIdx, int _trainIdx, int _imgIdx, float _distance ) :  
+            queryIdx(_queryIdx), trainIdx(_trainIdx), imgIdx(_imgIdx), distance(_distance) {}  
+  
+    //queryIdx为query描述子的索引，match函数中前面的那个描述子  
+    CV_PROP_RW int queryIdx; // query descriptor index  
+    //trainIdx为train描述子的索引，match函数中后面的那个描述子  
+    CV_PROP_RW int trainIdx; // train descriptor index  
+    //imgIdx为进行匹配图像的索引  
+    //例如已知一幅图像的sift描述子，与其他十幅图像的描述子进行匹配，找最相似的图像，则imgIdx此时就有用了。  
+    CV_PROP_RW int imgIdx;   // train image index  
+    //distance为两个描述子之间的距离  
+    CV_PROP_RW float distance;  
+    //DMatch比较运算符重载，比较的是DMatch中的distance，小于为true，否则为false  
+    // less is better  
+    bool operator<( const DMatch &m ) const  
+    {  
+        return distance < m.distance;  
+    }  
+};  
