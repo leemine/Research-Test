@@ -2,6 +2,9 @@ ORB特征提取，生成brisk描述子和keypoints两组数据；
 图像brisk描述子通过汉明距离进行match匹配，输出match points 索引Dmatch；
 根据Dmatch结果（获得match的keypoints位置），对这些Keypoints点利用ransac算法求解外点和内点；
 
+0. ORB特征检测，匹配及Ransac去除
+http://blog.csdn.net/quincuntial/article/details/50461692
+
 1. openCV中的findHomography函数分析以及RANSAC算法的详解（源代码分析）
 http://blog.csdn.net/qq_25352981/article/details/51530751
 
