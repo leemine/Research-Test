@@ -10,6 +10,8 @@ Descriptors:  ;
 KLT;
 BA;
 
+
+
 视觉特征处理相关函数及原理
 1）calcOpticalFlowPyrLK
 通过金字塔Lucas-Kanade 光流方法计算某些点集的光流（稀疏光流）。
@@ -28,6 +30,10 @@ http://blog.csdn.net/tostq/article/details/49157811
 
 
 ORB描述子提取与匹配：
+
+ORB-SLAM2跟踪之提取ORB特征
+http://blog.csdn.net/u011380574/article/details/71498561
+
 1.  OpenCV中ORB特征点检测和匹配简单用法
 http://blog.csdn.net/robinhjwy/article/details/77620924
 
