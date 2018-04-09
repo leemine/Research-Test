@@ -2,3 +2,5 @@
 1. IMU误差模型和校准
 http://www.cnblogs.com/buxiaoyi/p/7541974.html
 
+2. 从零开始的 IMU 状态模型推导
+http://fzheng.me/2016/11/20/imu_model_eq/#2-3-%E5%89%8D%E7%BD%AE3-%E9%AB%98%E6%96%AF%E7%99%BD%E5%99%AA%E5%A3%B0%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%B8%B8%E8%B5%B0
