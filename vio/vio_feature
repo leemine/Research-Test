@@ -1,3 +1,5 @@
+通过fast 金字塔、KLT改成 orb brief，match；  特征值匹配是否需要考虑distort或undistort，是否需要通过essential matrix去除噪点；
+
 1. Feature descritor:
 Corer:   Fast;  Harris;
 Descriptors:  ; 
