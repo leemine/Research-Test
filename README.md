@@ -7,3 +7,6 @@ Reinforcement learning in robotics: A survey
 
 Server:
 http://idea.lanyus.com/
+
+state_estimate course
+http://udel.edu/~ghuang/zju-est/
