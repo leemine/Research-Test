@@ -10,3 +10,6 @@ http://idea.lanyus.com/
 
 state_estimate course
 http://udel.edu/~ghuang/zju-est/
+
+MIT： Lidar + GPS
+https://www.csail.mit.edu/news/self-driving-cars-country-roads
