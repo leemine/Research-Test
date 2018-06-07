@@ -16,3 +16,7 @@ https://www.csail.mit.edu/news/self-driving-cars-country-roads
 
 有关Eigen的基本操作
 https://blog.csdn.net/xiamentingtao/article/details/54341475
+
+视觉SLAM中的数学基础 第四篇 李群与李代数（1）（2）
+https://www.cnblogs.com/gaoxiang12/p/5137454.html
+https://www.cnblogs.com/gaoxiang12/p/5577912.html
