@@ -13,3 +13,6 @@ http://udel.edu/~ghuang/zju-est/
 
 MIT： Lidar + GPS
 https://www.csail.mit.edu/news/self-driving-cars-country-roads
+
+有关Eigen的基本操作
+https://blog.csdn.net/xiamentingtao/article/details/54341475
