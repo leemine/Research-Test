@@ -26,3 +26,6 @@ http://www.cvlibs.net/software/calibration/
 
 捷联惯导算法与组合导航原理讲义
 http://blog.sina.com.cn/s/blog_40edfdc90102xd2t.html
+
+殷创相机
+http://www.entroninc.com/prouduct.html
