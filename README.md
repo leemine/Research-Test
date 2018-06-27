@@ -32,3 +32,6 @@ http://www.entroninc.com/prouduct.html
 
 3块常见的Arduino控制板参数整理
 https://zhuanlan.zhihu.com/p/34624262
+
+四元数运动学笔记（3）四元数和旋转相关的约定表述：hamilton vs jpl
+https://www.cnblogs.com/youzx/p/6387740.html
