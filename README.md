@@ -30,6 +30,9 @@ http://blog.sina.com.cn/s/blog_40edfdc90102xd2t.html
 殷创相机
 http://www.entroninc.com/prouduct.html
 
+小觅相机
+http://www.myntai.com/cn/mynteye/standard/specs
+
 3块常见的Arduino控制板参数整理
 https://zhuanlan.zhihu.com/p/34624262
 
