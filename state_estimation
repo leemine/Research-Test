@@ -8,3 +8,27 @@ Lie groups, Lie algebras, projective geometry and optimization for 3D Geometry, 
 Peter Hughes《Spacecraft Attitude Dynamics》
 贝叶斯滤波 
 Simo Sarkka 《Baysian Filtering and smoothing》
+
+
+
+《state estimation for robotics》 是一本状态估计理论方面的经典教材，它的内容涵盖了贝叶斯估计、最大后验概率估计、kalman、EKF、三维刚体运动、李群、李代数等。是机器人领域入门的必备书籍。
+
+下面是黄山老师为大家带来的解读。大家对本书的讨论可以在下方留言。
+
+黄山老师带你学《state estimation for robotics》（一）
+http://mp.weixin.qq.com/s/R4USEtArTiljIwzeBJDDvQ
+
+黄山老师带你学《state estimation for robotics》（二）
+http://mp.weixin.qq.com/s/dUtBdWwo2XPT0GYgqvelaw
+
+黄山老师带你学《state estimation for robotics》（三）
+http://mp.weixin.qq.com/s/sj5AyrTgvl–z0iksy85vA
+
+黄山老师带你学《state estimation for robotics》（四）
+http://mp.weixin.qq.com/s/IW9SZ6i_q2QFTrYMcS0IzQ
+
+黄山老师带你学《state estimation for robotics》（五）
+http://mp.weixin.qq.com/s/jMn6QTQ-tQsAYbUmKY9qhg
+
+黄山老师带你学《state estimation for robotics》（六）
+http://mp.weixin.qq.com/s/QuIKANOuTQaSyCR3upgPzg
