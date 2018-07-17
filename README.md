@@ -47,3 +47,6 @@ http://lolengine.net/blog/2013/09/18/beautiful-maths-quaternion-from-vectors
 
 泡泡机器人官网：
 http://paopaorobot.org/
+
+Kalman:
+https://www.cs.unc.edu/~welch/kalman/
