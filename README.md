@@ -51,5 +51,5 @@ http://paopaorobot.org/
 Kalman:
 https://www.cs.unc.edu/~welch/kalman/
 
-Roland Seigwa
+ETH:  Roland Seigwa
 http://www.asl.ethz.ch/the-lab/people/person-detail.html?persid=29981
