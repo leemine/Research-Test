@@ -53,3 +53,6 @@ https://www.cs.unc.edu/~welch/kalman/
 
 ETH:  Roland Seigwa
 http://www.asl.ethz.ch/the-lab/people/person-detail.html?persid=29981
+
+RANSAC源码分析：cv::findFundamentalMat()
+https://blog.csdn.net/lz20120808/article/details/49280443
