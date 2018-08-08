@@ -56,3 +56,6 @@ http://www.asl.ethz.ch/the-lab/people/person-detail.html?persid=29981
 
 RANSAC源码分析：cv::findFundamentalMat()
 https://blog.csdn.net/lz20120808/article/details/49280443
+
+C++继承，子类赋值给父类：
+https://blog.csdn.net/hudfang/article/details/50544371
