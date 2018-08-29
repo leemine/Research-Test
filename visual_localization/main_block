@@ -23,6 +23,8 @@ Block 3：
 3.特征提取及特征跟踪
 3.1 MSCKF状态向量中增加当前帧的摄像机位姿；若位姿数大于滑动窗口大小的范围，去除状态变量中最早的视图对应的摄像机位姿
 
+    参考： Stochastic Cloning: A generalized framework for processing relative state measurements
+
 3.2提取图像特征并匹配，去除外点。
 
 3.3 处理所有提取的特征。判断当前特征是否是之前视图中已经观察到的特征
